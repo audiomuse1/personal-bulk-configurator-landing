@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — BulkPrintPro</title>
+  <meta name="description" content="Tell us about your print shop and we'll build your branded online storefront. Fill out the intake form to get started.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="/" class="nav-logo">Bulk<span>Print</span>Pro</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><a href="/products.html">Products</a></li>
+        <li><a href="/pricing.html">Pricing</a></li>
+        <li><a href="/get-started.html" class="nav-cta active">Get Started</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Get Started</h1>
+      <p>Tell us about your shop and we'll build your storefront. We'll follow up within 1 business day.</p>
+    </div>
+  </section>
+
+  <!-- INTAKE FORM -->
+  <section>
+    <div class="container">
+
+      <div class="form-card">
+        <form name="intake" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="intake">
+          <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <!-- CONTACT INFO -->
+          <div class="form-section-title">Contact Information</div>
+
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="john@yourprintshop.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+          </div>
+
+          <!-- SHOP INFO -->
+          <div class="form-section-title">Your Print Shop</div>
+
+          <div class="form-group">
+            <label for="shop-name">Shop Name *</label>
+            <input type="text" id="shop-name" name="shop-name" placeholder="Acme Print Co." required>
+          </div>
+
+          <div class="form-group">
+            <label for="website">Current Website <span class="optional">(if you have one)</span></label>
+            <input type="url" id="website" name="website" placeholder="https://www.yourprintshop.com">
+            <div class="form-hint">We'll use this to match your storefront's look and feel.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="subdomain">Preferred Subdomain</label>
+            <input type="text" id="subdomain" name="subdomain" placeholder="orders.yourprintshop.com">
+            <div class="form-hint">Where your storefront will live. We'll help set this up.</div>
+          </div>
+
+          <!-- PACKAGE -->
+          <div class="form-section-title">Package Selection</div>
+
+          <div class="form-group">
+            <label for="package">Which package interests you? *</label>
+            <select id="package" name="package" required>
+              <option value="" disabled selected>Select a package</option>
+              <option value="starter">Starter (\$3,000) — Pick 3 products</option>
+              <option value="professional">Professional (\$4,500) — All 6 products</option>
+              <option value="not-sure">Not sure yet — help me decide</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="maintenance">Monthly maintenance plan?</label>
+            <select id="maintenance" name="maintenance">
+              <option value="" disabled selected>Select a plan</option>
+              <option value="self-managed">Self-Managed (\$0/mo) — I'll manage it myself</option>
+              <option value="managed">Managed (\$250/mo) — Monthly maintenance + 1 pricing update</option>
+              <option value="premium">Premium (\$400/mo) — Priority support + 3 pricing updates</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+
+          <!-- PRODUCTS -->
+          <div class="form-section-title">Products</div>
+          <p style="font-size: 0.9rem; color: #666; margin-bottom: 16px;">Select the product types you want on your storefront. Standard products are included in your package. Custom types are \$150 each.</p>
+
+          <div class="form-group">
+            <label>Standard Products (included)</label>
+            <div class="checkbox-grid">
+              <label class="checkbox-item">
+                <input type="checkbox" name="products" value="tshirts"> Custom T-Shirts
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="products" value="stickers"> Custom Stickers
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="products" value="buttons"> Custom Buttons
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="products" value="mugs"> Custom Mugs
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="products" value="cancoolers"> Custom Can Coolers
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="products" value="yardsigns"> Custom Yard Signs
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="custom-products">Custom Product Types <span class="optional">(\$150 each)</span></label>
+            <input type="text" id="custom-products" name="custom-products" placeholder="e.g. Hats, Tote bags, Banners">
+            <div class="form-hint">List any product types not in the standard 6 above.</div>
+          </div>
+
+          <!-- BRANDING -->
+          <div class="form-section-title">Branding</div>
+          <p style="font-size: 0.9rem; color: #666; margin-bottom: 16px;">We'll style your storefront to match your brand. Here's an example of what the final store looks like — with your colors and logo applied:</p>
+
+          <div class="screenshot-placeholder" style="margin-bottom: 24px; min-height: 200px;">
+            <div style="font-size:2rem; opacity:0.3;">🖥️</div>
+            <p>Example storefront screenshot</p>
+            <p style="font-size:0.8rem;">Your logo, colors, and products here</p>
+          </div>
+
+          <div class="form-group">
+            <label>Primary Brand Color</label>
+            <div class="color-picker-group">
+              <input type="color" name="color-primary-picker" value="#0088cc">
+              <input type="text" name="color-primary" placeholder="#0088cc">
+            </div>
+            <div class="form-hint">Used for navigation bar, links, and accents.</div>
+          </div>
+
+          <div class="form-group">
+            <label>Accent / CTA Color <span class="optional">(optional)</span></label>
+            <div class="color-picker-group">
+              <input type="color" name="color-accent-picker" value="#e85d3a">
+              <input type="text" name="color-accent" placeholder="#e85d3a">
+            </div>
+            <div class="form-hint">Used for buttons and call-to-action highlights.</div>
+          </div>
+
+          <div class="form-group">
+            <label>Background Color <span class="optional">(optional)</span></label>
+            <div class="color-picker-group">
+              <input type="color" name="color-bg-picker" value="#ffffff">
+              <input type="text" name="color-bg" placeholder="#ffffff">
+            </div>
+            <div class="form-hint">Page background. White is the default — cream, light gray, etc. also work.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="logo-url">Logo <span class="optional">(link or describe — we'll follow up)</span></label>
+            <input type="text" id="logo-url" name="logo-url" placeholder="https://yoursite.com/logo.png or 'I'll email it'">
+            <div class="form-hint">Paste a link to your logo, or just type "I'll email it" and we'll follow up.</div>
+          </div>
+
+          <!-- PRICING INFO -->
+          <div class="form-section-title">Your Pricing</div>
+
+          <div class="form-group">
+            <label for="pricing-info">How do you currently price your products?</label>
+            <textarea id="pricing-info" name="pricing-info" placeholder="e.g. T-shirts: 24-47 units = \$8.50 each, 48-99 = \$7.25 each, 100+ = \$6.00 each. Stickers: \$0.50 each for 100+. etc."></textarea>
+            <div class="form-hint">Rough numbers are fine — we'll work with you to finalize. You can also email a rate sheet after submitting.</div>
+          </div>
+
+          <!-- SUBDOMAIN SETUP -->
+          <div class="form-section-title">Domain Setup</div>
+
+          <div class="form-group">
+            <label for="domain-setup">How would you like to handle subdomain setup?</label>
+            <select id="domain-setup" name="domain-setup">
+              <option value="" disabled selected>Select an option</option>
+              <option value="do-it-for-me">Do it for me — I'll provide hosting access</option>
+              <option value="send-instructions">Send me instructions — I or my IT person will do it</option>
+              <option value="no-domain">I don't have a domain yet — I'll use the BigCommerce default</option>
+              <option value="not-sure">Not sure — let's discuss</option>
+            </select>
+          </div>
+
+          <!-- ADDITIONAL NOTES -->
+          <div class="form-section-title">Anything Else?</div>
+
+          <div class="form-group">
+            <label for="notes">Additional Notes <span class="optional">(optional)</span></label>
+            <textarea id="notes" name="notes" placeholder="Anything else we should know? Special requirements, timeline needs, questions?"></textarea>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 16px;">Submit Intake Form</button>
+          <p style="font-size: 0.85rem; color: #999; text-align: center; margin-top: 12px;">We'll follow up within 1 business day to discuss your project.</p>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Happens After You Submit</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>We Review</h3>
+          <p>We look at your submission and prepare a project plan based on your needs.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Quick Call</h3>
+          <p>15-minute call to confirm details, finalize pricing tiers, and answer questions.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>We Start Building</h3>
+          <p>Once approved, we begin building. Your storefront is typically live in 1–2 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">Bulk<span>Print</span>Pro</div>
+          <p>Online storefronts for custom print shops. Replace email chaos with clean, complete orders.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/how-it-works.html">How It Works</a></li>
+            <li><a href="/products.html">Products</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="/get-started.html">Intake Form</a></li>
+            <li><a href="/pricing.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BulkPrintPro. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
